@@ -1069,7 +1069,7 @@ input:focus {
     padding-right: 20px;
 }
 .tasks-tips li::before {
-    content: 'âœ“';
+    content: '✓';
     position: absolute;
     right: 0;
     color: #22c55e;
