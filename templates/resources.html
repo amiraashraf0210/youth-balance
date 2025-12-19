@@ -1,0 +1,360 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Youth Balance - Resources</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+        <div class="page-shell">
+                <header class="top-nav">
+                        <div class="brand">
+                                <span class="brand-main">Youth Balance</span>
+                                <span class="brand-sub">Resources</span>
+                        </div>
+                        <nav class="nav-links">
+                                <a href="{{ url_for('home') }}">Home</a>
+                                <a href="{{ url_for('wellbeing') }}">Wellbeing</a>
+                                <a href="{{ url_for('tasks_page') }}">Daily Tasks</a>
+                                <a href="{{ url_for('resources') }}" class="active">Resources</a>
+                                <a href="{{ url_for('account') }}" class="nav-cta">Account</a>
+                        </nav>
+                </header>
+
+                <main class="page-main">
+                        <section class="section long-section fade-in-up">
+                                <h1 class="section-title">Your Personal Growth Library</h1>
+                                <p class="section-intro">
+                                        Carefully curated resources to support your journey through academics, personal
+                                        development,
+                                        and life skills. Each section contains practical, actionable advice you can
+                                        apply today.
+                                </p>
+
+                                <div class="resources-list">
+                                        <article class="resource-item">
+                                                <h2><i class="fas fa-clock"></i> Time & Study Management</h2>
+                                                <p>Master your schedule and study effectively without burning out or
+                                                        sacrificing your wellbeing.
+                                                </p>
+                                                <ul>
+                                                        <li><a href="https://todoist.com/productivity-methods/pomodoro-technique"
+                                                                        target="_blank">The Pomodoro Technique:
+                                                                        25-minute focused study sessions</a></li>
+                                                        <li><a href="https://www.khanacademy.org/college-careers-more/college-admissions/applying-to-college/a/creating-a-study-schedule"
+                                                                        target="_blank">How to create a realistic weekly
+                                                                        study schedule</a></li>
+                                                        <li><a href="https://www.headspace.com/articles/student-burnout"
+                                                                        target="_blank">Avoiding
+                                                                        burnout during exam season</a></li>
+                                                        <li><a href="https://clockify.me/time-blocking"
+                                                                        target="_blank">Time blocking: Planning your
+                                                                        day in chunks</a></li>
+                                                        <li><a href="https://www.coursera.org/articles/learning-styles"
+                                                                        target="_blank">Study
+                                                                        techniques that actually work for different
+                                                                        learning styles</a></li>
+                                                        <li><a href="https://www.verywellmind.com/work-life-balance-for-students-5323977"
+                                                                        target="_blank">Balancing academics with social
+                                                                        life and self-care</a></li>
+                                                        <li><a href="https://www.mindtools.com/pages/article/newHTE_96.htm"
+                                                                        target="_blank">How to
+                                                                        stop procrastinating and start studying</a></li>
+                                                        <li><a href="https://www.collegeraptor.com/getting-in/articles/tips-tools-advice/creating-perfect-study-environment/"
+                                                                        target="_blank">Creating the perfect study
+                                                                        environment</a></li>
+                                                        <li><a href="https://www.oxford-royale.com/articles/note-taking-methods/"
+                                                                        target="_blank">Note-taking methods: Cornell,
+                                                                        mind mapping, and more</a></li>
+                                                        <li><a href="https://www.indeed.com/career-advice/career-development/how-to-manage-multiple-deadlines"
+                                                                        target="_blank">Managing multiple deadlines
+                                                                        without stress</a></li>
+                                                </ul>
+                                        </article>
+
+                                        <article class="resource-item">
+                                                <h2><i class="fas fa-brain"></i> Mental Health & Wellness</h2>
+                                                <p>Understanding and caring for your mental health with gentle,
+                                                        practical approaches.</p>
+                                                <ul>
+                                                        <li><a href="https://www.verywellmind.com/stress-vs-anxiety-5207918"
+                                                                        target="_blank">Recognizing the difference
+                                                                        between stress and anxiety</a></li>
+                                                        <li><a href="https://www.healthline.com/health/grounding-techniques"
+                                                                        target="_blank">5
+                                                                        grounding techniques for overwhelming
+                                                                        moments</a></li>
+                                                        <li><a href="https://www.psychologytoday.com/us/blog/the-gen-y-guide/201607/how-deal-academic-pressure"
+                                                                        target="_blank">How to deal with academic
+                                                                        pressure and expectations</a></li>
+                                                        <li><a href="https://www.verywellmind.com/characteristics-of-emotionally-intelligent-people-2795438"
+                                                                        target="_blank">Building resilience and
+                                                                        emotional intelligence</a></li>
+                                                        <li><a href="https://www.mentalhealth.gov/get-help/immediate-help"
+                                                                        target="_blank">When and
+                                                                        how to seek professional mental health
+                                                                        support</a></li>
+                                                        <li><a href="https://www.psychologytoday.com/us/blog/the-mindful-self-compassion-workbook/201703/perfectionism-the-bane-happiness"
+                                                                        target="_blank">Managing perfectionism and fear
+                                                                        of failure</a></li>
+                                                        <li><a href="https://www.verywellmind.com/ways-to-stop-comparing-yourself-to-others-5190656"
+                                                                        target="_blank">Dealing with comparison and
+                                                                        social media pressure</a></li>
+                                                        <li><a href="https://www.mayoclinic.org/diseases-conditions/seasonal-affective-disorder/symptoms-causes/syc-20364651"
+                                                                        target="_blank">Understanding and managing
+                                                                        seasonal depression</a></li>
+                                                        <li><a href="https://www.headspace.com/meditation/mindfulness"
+                                                                        target="_blank">Mindfulness
+                                                                        and meditation for beginners</a></li>
+                                                        <li><a href="https://www.verywellmind.com/how-to-set-boundaries-4177229"
+                                                                        target="_blank">Creating healthy boundaries with
+                                                                        family and friends</a></li>
+                                                </ul>
+                                        </article>
+
+                                        <article class="resource-item">
+                                                <h2><i class="fas fa-seedling"></i> Personal Development</h2>
+                                                <p>Gentle approaches to growth, goal-setting, and becoming your best
+                                                        self at your own pace.</p>
+                                                <ul>
+                                                        <li><a href="https://jamesclear.com/atomic-habits"
+                                                                        target="_blank">How to build habits that
+                                                                        actually stick</a></li>
+                                                        <li><a href="https://www.verywellmind.com/journaling-prompts-for-mental-health-5213476"
+                                                                        target="_blank">Journaling prompts for
+                                                                        self-discovery and growth</a></li>
+                                                        <li><a href="https://www.mindtools.com/pages/article/smart-goals.htm"
+                                                                        target="_blank">Setting realistic goals and
+                                                                        celebrating small wins</a></li>
+                                                        <li><a href="https://www.verywellmind.com/what-is-a-mindset-2795025"
+                                                                        target="_blank">Developing a growth mindset vs.
+                                                                        fixed mindset</a></li>
+                                                        <li><a href="https://www.psychologytoday.com/us/blog/click-here-happiness/201902/how-find-your-core-values"
+                                                                        target="_blank">Finding your values and living
+                                                                        authentically</a></li>
+                                                        <li><a href="https://www.verywellmind.com/how-to-boost-your-self-esteem-4163098"
+                                                                        target="_blank">Building confidence and
+                                                                        self-esteem</a></li>
+                                                        <li><a href="https://www.ted.com/talks/sarah_lewis_embrace_the_near_win"
+                                                                        target="_blank">Learning to embrace failure as
+                                                                        part of growth</a></li>
+                                                        <li><a href="https://www.mindtools.com/pages/article/newTED_85.htm"
+                                                                        target="_blank">Creating
+                                                                        a personal mission statement</a></li>
+                                                        <li><a href="https://www.verywellmind.com/what-is-emotional-intelligence-2795423"
+                                                                        target="_blank">Developing emotional
+                                                                        intelligence and empathy</a></li>
+                                                        <li><a href="https://self-compassion.org/the-three-elements-of-self-compassion-2/"
+                                                                        target="_blank">The art of self-compassion and
+                                                                        positive self-talk</a></li>
+                                                </ul>
+                                        </article>
+
+                                        <article class="resource-item">
+                                                <h2><i class="fas fa-spa"></i> Beauty & Self-Care</h2>
+                                                <p>Simple, budget-friendly tips for looking and feeling your best,
+                                                        inside and out.</p>
+                                                <ul>
+                                                        <li><a href="https://www.healthline.com/health/beauty-skin-care/skin-care-routine"
+                                                                        target="_blank">Basic skincare routine for
+                                                                        beginners</a></li>
+                                                        <li><a href="https://www.cosmopolitan.com/style-beauty/beauty/g26840933/easy-hairstyles/"
+                                                                        target="_blank">Quick hairstyles for school and
+                                                                        work</a></li>
+                                                        <li><a href="https://www.byrdie.com/budget-makeup-tips-4783229"
+                                                                        target="_blank">Budget-friendly makeup tips and
+                                                                        tricks</a></li>
+                                                        <li><a href="https://www.whowhatwear.com/capsule-wardrobe-guide"
+                                                                        target="_blank">Building a
+                                                                        capsule wardrobe on a student budget</a></li>
+                                                        <li><a href="https://www.healthline.com/health/beauty-skin-care/diy-face-mask"
+                                                                        target="_blank">DIY face masks and natural
+                                                                        beauty treatments</a></li>
+                                                        <li><a href="https://www.instyle.com/fashion/how-to-dress-for-your-body-type"
+                                                                        target="_blank">Dressing for your body type and
+                                                                        personal style</a></li>
+                                                        <li><a href="https://www.healthline.com/health/beauty-skin-care/hair-care-routine"
+                                                                        target="_blank">Hair care tips for different
+                                                                        hair types</a></li>
+                                                        <li><a href="https://www.allure.com/gallery/easy-nail-art-designs"
+                                                                        target="_blank">Nail care
+                                                                        and simple nail art ideas</a></li>
+                                                        <li><a href="https://www.verywellmind.com/how-to-be-more-confident-2795395"
+                                                                        target="_blank">Building confidence through
+                                                                        personal style</a></li>
+                                                        <li><a href="https://www.healthline.com/health/self-care-activities"
+                                                                        target="_blank">Self-care routines that don't
+                                                                        cost money</a></li>
+                                                </ul>
+                                        </article>
+
+                                        <article class="resource-item">
+                                                <h2><i class="fas fa-heartbeat"></i> Health & Nutrition</h2>
+                                                <p>Practical advice for maintaining physical health and energy during
+                                                        busy academic periods.</p>
+                                                <ul>
+                                                        <li><a href="https://www.eatingwell.com/gallery/7877750/healthy-meals-for-college-students/"
+                                                                        target="_blank">Quick, healthy meals for busy
+                                                                        students</a></li>
+                                                        <li><a href="https://www.self.com/story/dorm-room-workout"
+                                                                        target="_blank">Dorm room
+                                                                        workouts and exercises</a></li>
+                                                        <li><a href="https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/water/art-20044256"
+                                                                        target="_blank">How to drink more water and stay
+                                                                        hydrated</a></li>
+                                                        <li><a href="https://www.healthline.com/nutrition/29-healthy-snacks-for-weight-loss"
+                                                                        target="_blank">Healthy snacks for studying and
+                                                                        energy</a></li>
+                                                        <li><a href="https://www.fda.gov/food/new-nutrition-facts-label/how-understand-and-use-nutrition-facts-label"
+                                                                        target="_blank">Understanding nutrition labels
+                                                                        and making smart choices</a></li>
+                                                        <li><a href="https://www.verywellmind.com/how-to-stop-emotional-eating-4114317"
+                                                                        target="_blank">Managing stress eating and
+                                                                        emotional eating</a></li>
+                                                        <li><a href="https://www.sleepfoundation.org/how-sleep-works/sleep-hygiene-tips"
+                                                                        target="_blank">Sleep hygiene: Getting better
+                                                                        rest for better performance</a></li>
+                                                        <li><a href="https://www.eatingwell.com/article/290736/meal-prep-101-a-beginners-guide/"
+                                                                        target="_blank">Meal prep ideas for busy
+                                                                        weeks</a></li>
+                                                        <li><a href="https://www.nationaleatingdisorders.org/body-image-0"
+                                                                        target="_blank">Building
+                                                                        a positive relationship with food and body
+                                                                        image</a></li>
+                                                        <li><a href="https://www.verywellfit.com/quick-workouts-for-busy-people-1231071"
+                                                                        target="_blank">Exercise routines that fit into
+                                                                        a busy schedule</a></li>
+                                                </ul>
+                                        </article>
+
+                                        <article class="resource-item">
+                                                <h2><i class="fas fa-coins"></i> Financial Literacy</h2>
+                                                <p>Essential money management skills for students and young adults
+                                                        starting their financial
+                                                        journey.</p>
+                                                <ul>
+                                                        <li><a href="https://www.nerdwallet.com/article/finance/college-student-budget"
+                                                                        target="_blank">Creating your first budget as a
+                                                                        student</a></li>
+                                                        <li><a href="https://www.investopedia.com/articles/personal-finance/040315/how-save-money-low-income.asp"
+                                                                        target="_blank">How to start saving money with a
+                                                                        small income</a></li>
+                                                        <li><a href="https://studentaid.gov/understand-aid/types/loans"
+                                                                        target="_blank">Understanding student loans and
+                                                                        managing debt</a></li>
+                                                        <li><a href="https://www.indeed.com/career-advice/finding-a-job/side-jobs-for-college-students"
+                                                                        target="_blank">Side hustle ideas for
+                                                                        students</a></li>
+                                                        <li><a href="https://www.experian.com/blogs/ask-experian/how-to-build-credit/"
+                                                                        target="_blank">Building credit responsibly</a>
+                                                        </li>
+                                                        <li><a href="https://www.nerdwallet.com/article/banking/emergency-fund-why-it-matters"
+                                                                        target="_blank">Emergency fund basics: Why and
+                                                                        how to start</a></li>
+                                                        <li><a href="https://www.consumerreports.org/money/shopping/how-to-save-money-while-shopping/"
+                                                                        target="_blank">Smart shopping: Getting more for
+                                                                        your money</a></li>
+                                                        <li><a href="https://www.irs.gov/filing/free-file-do-your-federal-taxes-for-free"
+                                                                        target="_blank">Understanding taxes and filing
+                                                                        your first return</a></li>
+                                                        <li><a href="https://www.investopedia.com/investing-for-beginners-4689754"
+                                                                        target="_blank">Investing basics for
+                                                                        beginners</a></li>
+                                                        <li><a href="https://www.thebalancemoney.com/financial-planning-after-college-graduation-4172312"
+                                                                        target="_blank">Financial planning for
+                                                                        post-graduation life</a></li>
+                                                </ul>
+                                        </article>
+
+                                        <article class="resource-item">
+                                                <h2><i class="fas fa-bullseye"></i> Career & Future Planning</h2>
+                                                <p>Guidance for exploring career paths, building skills, and preparing
+                                                        for your professional
+                                                        future.</p>
+                                                <ul>
+                                                        <li><a href="https://www.indeed.com/career-advice/finding-a-job/how-to-choose-a-major"
+                                                                        target="_blank">How to choose a major that fits
+                                                                        your interests and goals</a></li>
+                                                        <li><a href="https://www.indeed.com/career-advice/resumes-cover-letters"
+                                                                        target="_blank">Building a strong resume and
+                                                                        cover letter</a></li>
+                                                        <li><a href="https://www.themuse.com/advice/networking-for-people-who-hate-networking"
+                                                                        target="_blank">Networking tips for introverts
+                                                                        and beginners</a></li>
+                                                        <li><a href="https://www.indeed.com/career-advice/finding-a-job/how-to-get-an-internship"
+                                                                        target="_blank">Finding and applying for
+                                                                        internships</a></li>
+                                                        <li><a href="https://www.indeed.com/career-advice/interviewing"
+                                                                        target="_blank">Interview
+                                                                        skills and confidence building</a></li>
+                                                        <li><a href="https://university.linkedin.com/linkedin-for-students"
+                                                                        target="_blank">Using
+                                                                        LinkedIn effectively as a student</a></li>
+                                                        <li><a href="https://www.themuse.com/advice/how-to-request-an-informational-interview-and-get-a-yes"
+                                                                        target="_blank">Exploring career options through
+                                                                        informational interviews</a></li>
+                                                        <li><a href="https://www.indeed.com/career-advice/career-development/how-to-build-online-presence"
+                                                                        target="_blank">Building a professional online
+                                                                        presence</a></li>
+                                                        <li><a href="https://www.verywellmind.com/how-to-develop-leadership-skills-4163547"
+                                                                        target="_blank">Developing leadership skills in
+                                                                        college</a></li>
+                                                        <li><a href="https://www.petersons.com/blog/graduate-school-vs-entering-workforce/"
+                                                                        target="_blank">Planning for graduate school vs.
+                                                                        entering the workforce</a></li>
+                                                </ul>
+                                        </article>
+
+                                        <article class="resource-item">
+                                                <h2><i class="fas fa-users"></i> Relationships & Social Skills</h2>
+                                                <p>Building healthy relationships, communication skills, and navigating
+                                                        social situations with
+                                                        confidence.</p>
+                                                <ul>
+                                                        <li><a href="https://www.verywellmind.com/how-to-make-friends-in-college-4174534"
+                                                                        target="_blank">Making friends in college and
+                                                                        new environments</a></li>
+                                                        <li><a href="https://www.verywellmind.com/relationship-red-flags-5088102"
+                                                                        target="_blank">Healthy relationship red flags
+                                                                        and green flags</a></li>
+                                                        <li><a href="https://www.verywellmind.com/how-to-have-difficult-conversations-5191011"
+                                                                        target="_blank">Communication skills for
+                                                                        difficult conversations</a></li>
+                                                        <li><a href="https://www.verywellmind.com/how-to-set-boundaries-4177229"
+                                                                        target="_blank">Setting boundaries with friends
+                                                                        and family</a></li>
+                                                        <li><a href="https://www.verywellmind.com/how-to-recognize-a-toxic-friendship-5115895"
+                                                                        target="_blank">Dealing with toxic friendships
+                                                                        and relationships</a></li>
+                                                        <li><a href="https://www.verywellmind.com/how-to-be-more-confident-in-social-situations-3024888"
+                                                                        target="_blank">Building confidence in social
+                                                                        situations</a></li>
+                                                        <li><a href="https://www.mindtools.com/pages/article/newLDR_81.htm"
+                                                                        target="_blank">Conflict
+                                                                        resolution and problem-solving</a></li>
+                                                        <li><a href="https://www.verywellmind.com/how-to-help-a-friend-in-need-5207404"
+                                                                        target="_blank">Supporting friends through
+                                                                        difficult times</a></li>
+                                                        <li><a href="https://www.verywellmind.com/healthy-relationship-characteristics-4692820"
+                                                                        target="_blank">Dating advice and relationship
+                                                                        basics</a></li>
+                                                        <li><a href="https://www.verywellmind.com/how-to-build-a-support-system-4163992"
+                                                                        target="_blank">Building a support network and
+                                                                        community</a></li>
+                                                </ul>
+                                        </article>
+                                </div>
+
+
+                        </section>
+                </main>
+        </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,287 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youth Balance - Daily Tasks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="page-shell">
+        <header class="top-nav">
+            <div class="brand">
+                <span class="brand-main">Youth Balance</span>
+                <span class="brand-sub">Daily Tasks</span>
+            </div>
+            <nav class="nav-links">
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('wellbeing') }}">Wellbeing</a>
+                <a href="{{ url_for('tasks_page') }}" class="active">Daily Tasks</a>
+                <a href="{{ url_for('resources') }}">Resources</a>
+                <a href="{{ url_for('account') }}" class="nav-cta">Account</a>
+            </nav>
+        </header>
+
+        <main class="page-main">
+            <section class="section long-section fade-in-up">
+                <h1 class="section-title">Your Gentle Daily Checklist</h1>
+                <p class="section-intro">
+                    Realistic, achievable tasks that help you build healthy habits without pressure.
+                    Choose what feels right for you today and leave the rest for another time.
+                </p>
+
+                <div class="tasks-wrapper">
+                    <div class="tasks-column">
+                        <h2>Healthy Habits</h2>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Drink 6-8 glasses of water throughout the day</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Move your body for 15-30 minutes (walk, dance, stretch)</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Eat at least one piece of fruit or vegetable</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Get some fresh air and sunlight</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Go to bed at a reasonable time for you</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Take vitamins or supplements if needed</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Practice good posture while studying/working</span>
+                        </label>
+                    </div>
+
+                    <div class="tasks-column">
+                        <h2>Study & Work</h2>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Complete one focused study session (25-60 minutes)</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Finish one small pending task (email, assignment, call)</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Review tomorrow's schedule and priorities</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Organize your study space or desk</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Take notes or review what you learned today</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Set up materials for tomorrow's tasks</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Practice a skill you're learning (language, instrument, etc.)</span>
+                        </label>
+                    </div>
+
+                    <div class="tasks-column">
+                        <h2>Personal Time</h2>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Read 10-15 pages of a book you enjoy</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Write 3 lines about your day or feelings</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Spend 10 minutes without any screens</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Do something creative (draw, craft, music, write)</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Listen to music or a podcast you love</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Practice gratitude - think of 3 good things today</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Learn something new (fun fact, skill, recipe)</span>
+                        </label>
+                    </div>
+
+                    <div class="tasks-column">
+                        <h2>Home & Relationships</h2>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Tidy up one small area (desk, nightstand, corner)</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Connect with a friend or family member</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Prepare or enjoy a healthy meal/snack</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Do something kind for someone you care about</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Take care of a plant or pet (if you have one)</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Plan or prepare something for tomorrow</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Do a small household task that makes you feel good</span>
+                        </label>
+                    </div>
+
+                    <div class="tasks-column">
+                        <h2>Self-Care & Mindfulness</h2>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Take a relaxing shower or bath</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Do your skincare routine mindfully</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Practice deep breathing for 5 minutes</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Wear something that makes you feel confident</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Give yourself a compliment or positive affirmation</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Stretch or do gentle yoga for 10 minutes</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Set boundaries with technology or social media</span>
+                        </label>
+                    </div>
+
+                    <div class="tasks-column">
+                        <h2>Goals & Growth</h2>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Work on a personal project for 15-30 minutes</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Research something related to your future goals</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Update your resume, portfolio, or LinkedIn</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Network or reach out to someone in your field</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Save money or track your expenses</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Plan a step toward a long-term goal</span>
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox">
+                            <span>Reflect on your progress and celebrate small wins</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="tasks-footer">
+                    <div class="tasks-tips">
+                        <h3>Tips for Success:</h3>
+                        <ul>
+                            <li>Start with just 3-5 tasks per day</li>
+                            <li>It's okay if you don't complete everything</li>
+                            <li>Celebrate small accomplishments</li>
+                            <li>Adjust tasks based on your energy and schedule</li>
+                            <li>Focus on progress, not perfection</li>
+                            <li>Be kind to yourself on difficult days</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Save task states in localStorage
+        document.addEventListener('DOMContentLoaded', function () {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+            // Load saved states
+            checkboxes.forEach((checkbox, index) => {
+                const saved = localStorage.getItem(`task_${index}`);
+                if (saved === 'true') {
+                    checkbox.checked = true;
+                }
+
+                // Save changes
+                checkbox.addEventListener('change', function () {
+                    localStorage.setItem(`task_${index}`, this.checked);
+
+                    // Visual feedback when completing task
+                    if (this.checked) {
+                        this.parentElement.style.animation = 'taskComplete 0.5s ease';
+                        setTimeout(() => {
+                            this.parentElement.style.animation = '';
+                        }, 500);
+                    }
+                });
+            });
+
+            // Reset tasks at midnight
+            const now = new Date();
+            const tomorrow = new Date(now);
+            tomorrow.setDate(now.getDate() + 1);
+            tomorrow.setHours(0, 0, 0, 0);
+
+            const msUntilMidnight = tomorrow.getTime() - now.getTime();
+            setTimeout(() => {
+                localStorage.clear();
+                location.reload();
+            }, msUntilMidnight);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youth Balance - Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="login-page auth-page">
+    <div class="page-shell auth-shell">
+        <main class="page-main">
+            <div class="container fade-in-up">
+                <div class="form-box">
+                    <div class="form-header">
+                        <h1>Welcome back</h1>
+                        <p>Ready to continue your journey?</p>
+                    </div>
+
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                    {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+
+                    <form method="POST" action="{{ url_for('login') }}" class="login-form">
+                        <div class="input-group">
+                            <label>Username</label>
+                            <div class="input-wrapper">
+                                <input type="text" name="username" placeholder="Enter your username" required>
+                                <span class="input-icon"><i class="fas fa-user"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Password</label>
+                            <div class="input-wrapper">
+                                <input type="password" name="password" placeholder="Enter your password" required>
+                                <span class="input-icon"><i class="fas fa-lock"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="remember_me" value="1">
+                                <span class="checkmark"></span>
+                                Remember me for 30 days
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn login-btn">
+                            <span>Login</span>
+                            <div class="btn-ripple"></div>
+                        </button>
+                    </form>
+
+                    <p class="link">
+                        New to Youth Balance?
+                        <a href="{{ url_for('signup') }}">Create your account here</a>
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Enhanced user experience
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('.login-form');
+            const submitBtn = document.querySelector('.login-btn');
+
+            form.addEventListener('submit', function (e) {
+                submitBtn.classList.add('loading');
+                submitBtn.disabled = true;
+
+                // Re-enable button after 3 seconds if submission fails
+                setTimeout(() => {
+                    submitBtn.classList.remove('loading');
+                    submitBtn.disabled = false;
+                }, 3000);
+            });
+        });
+    </script>
+</body>
+
+</html>

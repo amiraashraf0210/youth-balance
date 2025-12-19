@@ -1,0 +1,340 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Youth Balance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard-shell">
+        
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <div class="brand">
+                    <span class="brand-main">Youth Balance</span>
+                    <span class="brand-sub">Dashboard</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#overview" class="nav-item active" data-section="overview">
+                    <i class="fas fa-home"></i>
+                    <span>Overview</span>
+                </a>
+                <a href="#tasks" class="nav-item" data-section="tasks">
+                    <i class="fas fa-tasks"></i>
+                    <span>My Tasks</span>
+                </a>
+                <a href="#notes" class="nav-item" data-section="notes">
+                    <i class="fas fa-sticky-note"></i>
+                    <span>My Notes</span>
+                </a>
+                <a href="#goals" class="nav-item" data-section="goals">
+                    <i class="fas fa-bullseye"></i>
+                    <span>My Goals</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-details">
+                        <span class="username">{{ username }}</span>
+                        <span class="user-role">Member</span>
+                    </div>
+                </div>
+                <a href="{{ url_for('logout') }}" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        
+        <main class="dashboard-main">
+            
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <h1 class="page-title">Welcome back, {{ username }}!</h1>
+                    <p class="page-subtitle">Let's make today amazing</p>
+                </div>
+                <div class="header-right">
+                    <button class="add-btn" onclick="showAddModal()">
+                        <i class="fas fa-plus"></i>
+                        <span>Add New</span>
+                    </button>
+                </div>
+            </header>
+
+            
+            <div class="dashboard-content">
+                
+                <section id="overview-section" class="content-section active">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="tasks-count">0</h3>
+                                <p>Active Tasks</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-sticky-note"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="notes-count">0</h3>
+                                <p>Notes</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="goals-count">0</h3>
+                                <p>Goals</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="progress-percent">0%</h3>
+                                <p>Progress</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="welcome-message">
+                        <div class="welcome-card">
+                            <div class="welcome-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="welcome-content">
+                                <h3>Welcome to Your Personal Space!</h3>
+                                <p>We've created some starter content to help you get started. Feel free to edit,
+                                    delete, or add your own items. This is your space to grow and flourish!</p>
+                                <div class="welcome-tips">
+                                    <div class="tip-item">
+                                        <i class="fas fa-lightbulb"></i>
+                                        <span>Click the <strong>+ Add</strong> button to create new items</span>
+                                    </div>
+                                    <div class="tip-item">
+                                        <i class="fas fa-edit"></i>
+                                        <span>Use the edit and delete buttons on each card</span>
+                                    </div>
+                                    <div class="tip-item">
+                                        <i class="fas fa-star"></i>
+                                        <span>Check off tasks as you complete them</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recent-activity">
+                        <h2>Quick Actions</h2>
+                        <div class="quick-actions">
+                            <button class="quick-action-btn" onclick="showAddTaskModal()">
+                                <i class="fas fa-plus"></i>
+                                <span>Add Task</span>
+                            </button>
+                            <button class="quick-action-btn" onclick="showAddNoteModal()">
+                                <i class="fas fa-sticky-note"></i>
+                                <span>Add Note</span>
+                            </button>
+                            <button class="quick-action-btn" onclick="showAddGoalModal()">
+                                <i class="fas fa-bullseye"></i>
+                                <span>Add Goal</span>
+                            </button>
+
+                        </div>
+                    </div>
+                </section>
+
+                
+                <section id="tasks-section" class="content-section">
+                    <div class="section-header">
+                        <h2>My Tasks</h2>
+                        <button class="btn btn-primary" onclick="showAddTaskModal()">
+                            <i class="fas fa-plus"></i>
+                            Add Task
+                        </button>
+                    </div>
+                    <div class="tasks-container">
+                        <div class="tasks-grid" id="tasks-grid">
+                            
+                        </div>
+                    </div>
+                </section>
+
+                
+                <section id="notes-section" class="content-section">
+                    <div class="section-header">
+                        <h2>My Notes</h2>
+                        <button class="btn btn-primary" onclick="showAddNoteModal()">
+                            <i class="fas fa-plus"></i>
+                            Add Note
+                        </button>
+                    </div>
+                    <div class="notes-container">
+                        <div class="notes-grid" id="notes-grid">
+                            
+                        </div>
+                    </div>
+                </section>
+
+                
+                <section id="goals-section" class="content-section">
+                    <div class="section-header">
+                        <h2>My Goals</h2>
+                        <button class="btn btn-primary" onclick="showAddGoalModal()">
+                            <i class="fas fa-plus"></i>
+                            Add Goal
+                        </button>
+                    </div>
+                    <div class="goals-container">
+                        <div class="goals-grid" id="goals-grid">
+                            
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+        </main>
+    </div>
+
+    
+    
+    <div id="addTaskModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add New Task</h3>
+                <span class="close" onclick="closeModal('addTaskModal')">&times;</span>
+            </div>
+            <form id="addTaskForm">
+                <div class="form-group">
+                    <label for="taskTitle">Task Title</label>
+                    <input type="text" id="taskTitle" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="taskDescription">Description</label>
+                    <textarea id="taskDescription" name="description" rows="3"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="taskPriority">Priority</label>
+                        <select id="taskPriority" name="priority">
+                            <option value="low">Low</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="taskCategory">Category</label>
+                        <select id="taskCategory" name="category">
+                            <option value="general">General</option>
+                            <option value="work">Work</option>
+                            <option value="personal">Personal</option>
+                            <option value="health">Health</option>
+                            <option value="learning">Learning</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('addTaskModal')">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+    <div id="addNoteModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add New Note</h3>
+                <span class="close" onclick="closeModal('addNoteModal')">&times;</span>
+            </div>
+            <form id="addNoteForm">
+                <div class="form-group">
+                    <label for="noteTitle">Note Title</label>
+                    <input type="text" id="noteTitle" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="noteContent">Content</label>
+                    <textarea id="noteContent" name="content" rows="5"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="noteCategory">Category</label>
+                        <select id="noteCategory" name="category">
+                            <option value="general">General</option>
+                            <option value="ideas">Ideas</option>
+                            <option value="reminders">Reminders</option>
+                            <option value="inspiration">Inspiration</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="noteColor">Color</label>
+                        <select id="noteColor" name="color">
+                            <option value="#4f46e5">Blue</option>
+                            <option value="#a8e6cf">Green</option>
+                            <option value="#ffd93d">Yellow</option>
+                            <option value="#06b6d4">Teal</option>
+                            <option value="#8b5cf6">Purple</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('addNoteModal')">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Note</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+    <div id="addGoalModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add New Goal</h3>
+                <span class="close" onclick="closeModal('addGoalModal')">&times;</span>
+            </div>
+            <form id="addGoalForm">
+                <div class="form-group">
+                    <label for="goalTitle">Goal Title</label>
+                    <input type="text" id="goalTitle" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="goalDescription">Description</label>
+                    <textarea id="goalDescription" name="description" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="goalTargetDate">Target Date</label>
+                    <input type="date" id="goalTargetDate" name="target_date">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('addGoalModal')">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Goal</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+
+</html>

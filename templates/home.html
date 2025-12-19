@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youth Balance - Your Safe Digital Space</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="page-shell">
+        <header class="top-nav">
+            <div class="brand">
+                <span class="brand-main">Youth Balance</span>
+                <span class="brand-sub">Your safe digital space</span>
+            </div>
+            <nav class="nav-links">
+                <a href="{{ url_for('home') }}" class="active">Home</a>
+                <a href="{{ url_for('wellbeing') }}">Wellbeing</a>
+                <a href="{{ url_for('tasks_page') }}">Daily Tasks</a>
+                <a href="{{ url_for('resources') }}">Resources</a>
+                <a href="{{ url_for('account') }}" class="nav-cta">Account</a>
+            </nav>
+        </header>
+
+        <main class="page-main">
+            <section class="hero-section">
+                <div class="hero-content fade-in-up">
+                    <div class="hero-badge"><i class="fas fa-star"></i> Empowering Youth Worldwide <i
+                            class="fas fa-star"></i></div>
+                    <h1 class="hero-title typing-animation">Welcome to Youth Balance</h1>
+                    <p class="hero-subtitle slide-in-left">Your safe digital space for growth and balance</p>
+                    <p class="hero-description slide-in-right">
+                        Discover a world of calm and productivity. We're here to support you on your journey towards a
+                        balanced life full of achievements.
+                    </p>
+
+                    <div class="hero-actions bounce-in">
+                        <a href="{{ url_for('signup') }}" class="btn btn-primary pulse-btn">
+                            <span>Start Your Journey</span>
+                        </a>
+                        <a href="{{ url_for('wellbeing') }}" class="btn btn-secondary">Discover More</a>
+                    </div>
+                </div>
+                <div class="floating-elements">
+                    <div class="floating-icon" style="--delay: 0s;"><i class="fas fa-heart"></i></div>
+                    <div class="floating-icon" style="--delay: 2s;"><i class="fas fa-star"></i></div>
+                    <div class="floating-icon" style="--delay: 4s;"><i class="fas fa-gem"></i></div>
+                    <div class="floating-icon" style="--delay: 1s;"><i class="fas fa-sparkles"></i></div>
+                    <div class="floating-icon" style="--delay: 3s;"><i class="fas fa-crown"></i></div>
+                </div>
+            </section>
+
+            <section class="features-section">
+                <div class="container">
+                    <h2 class="section-title reveal-on-scroll">What We Offer You</h2>
+                    <p class="section-subtitle reveal-on-scroll">Everything you need to create a balanced and fulfilling
+                        life</p>
+                    <div class="features-grid">
+                        <div class="feature-card hover-lift" data-aos="fade-up" data-aos-delay="100">
+                            <div class="feature-icon bounce-icon"><i class="fas fa-spa"></i></div>
+                            <h3>Mental Wellbeing</h3>
+                            <p>Tools and exercises to improve your mental and emotional health</p>
+                            <div class="card-hover-effect"></div>
+                        </div>
+                        <div class="feature-card hover-lift" data-aos="fade-up" data-aos-delay="200">
+                            <div class="feature-icon bounce-icon"><i class="fas fa-tasks"></i></div>
+                            <h3>Task Management</h3>
+                            <p>Organize your day and achieve your goals in an easy and fun way</p>
+                            <div class="card-hover-effect"></div>
+                        </div>
+                        <div class="feature-card hover-lift" data-aos="fade-up" data-aos-delay="300">
+                            <div class="feature-icon bounce-icon"><i class="fas fa-book-open"></i></div>
+                            <h3>Educational Resources</h3>
+                            <p>A rich library of useful content for personal development</p>
+                            <div class="card-hover-effect"></div>
+                        </div>
+                        <div class="feature-card hover-lift" data-aos="fade-up" data-aos-delay="400">
+                            <div class="feature-icon bounce-icon"><i class="fas fa-users"></i></div>
+                            <h3>Supportive Community</h3>
+                            <p>Join a community of inspiring and supportive young people</p>
+                            <div class="card-hover-effect"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="inspiration-section">
+                <div class="container">
+                    <div class="inspiration-header reveal-on-scroll">
+                        <h2 class="section-title gradient-text">Your Journey to Greatness Starts Here</h2>
+                        <p class="section-subtitle">Discover daily inspiration and practical tips designed specifically
+                            for ambitious young people like you</p>
+                    </div>
+
+                    <div class="inspiration-grid">
+                        <div class="inspiration-card card-1 hover-lift reveal-on-scroll">
+                            <div class="card-glow"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-star"></i></div>
+                                <h3>Daily Affirmations</h3>
+                                <p>"I am capable of achieving anything I set my mind to. Today I choose to believe in
+                                    myself and take one step closer to my dreams."</p>
+                                <div class="card-footer">
+                                    <span class="card-tag">Mindset</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="inspiration-card card-2 hover-lift reveal-on-scroll">
+                            <div class="card-glow"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-seedling"></i></div>
+                                <h3>Growth Mindset Tips</h3>
+                                <p>"Embrace challenges as opportunities to grow. Every 'no' brings you closer to your
+                                    'yes'. Your potential is limitless."</p>
+                                <div class="card-footer">
+                                    <span class="card-tag">Growth</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="inspiration-card card-3 hover-lift reveal-on-scroll">
+                            <div class="card-glow"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-fist-raised"></i></div>
+                                <h3>Confidence Boosters</h3>
+                                <p>"Your voice matters. Your ideas are valuable. Stand tall, speak up, and let your
+                                    authentic self shine brightly in every room you enter."</p>
+                                <div class="card-footer">
+                                    <span class="card-tag">Confidence</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="inspiration-card card-4 hover-lift reveal-on-scroll">
+                            <div class="card-glow"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+                                <h3>Goal Setting Secrets</h3>
+                                <p>"Break big dreams into small, actionable steps. Celebrate every milestone. Progress,
+                                    not perfection, is the key to success."</p>
+                                <div class="card-footer">
+                                    <span class="card-tag">Success</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="inspiration-card card-5 hover-lift reveal-on-scroll">
+                            <div class="card-glow"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-gem"></i></div>
+                                <h3>Self-Care Rituals</h3>
+                                <p>"Taking care of yourself isn't selfishâ€”it's essential. Create moments of peace,
+                                    practice gratitude, and honor your needs daily."</p>
+                                <div class="card-footer">
+                                    <span class="card-tag">Wellness</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="inspiration-card card-6 hover-lift reveal-on-scroll">
+                            <div class="card-glow"></div>
+                            <div class="card-content">
+                                <div class="card-icon"><i class="fas fa-magic"></i></div>
+                                <h3>Transformation Tips</h3>
+                                <p>"Change begins with a single decision to be better than yesterday. Trust the process,
+                                    embrace the journey, and watch yourself bloom."</p>
+                                <div class="card-footer">
+                                    <span class="card-tag">Change</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="inspiration-cta reveal-on-scroll">
+                        <h3>Ready to Transform Your Life?</h3>
+                        <p>Join our community and get daily inspiration delivered to your inbox</p>
+                        <a href="{{ url_for('signup') }}" class="btn btn-gradient">Start Your Transformation</a>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+    </div>
+
+    <script>
+        // Counter Animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const increment = target / 100;
+                let current = 0;
+
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        counter.textContent = Math.ceil(current);
+                        setTimeout(updateCounter, 20);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                updateCounter();
+            });
+        }
+
+        // Reveal on Scroll Animation
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal-on-scroll');
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        // Typing Animation
+        function typeWriter() {
+            const text = "Welcome to Youth Balance";
+            const element = document.querySelector('.typing-animation');
+            let i = 0;
+
+            element.textContent = '';
+
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, 100);
+                }
+            }
+
+            setTimeout(type, 1000);
+        }
+
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', function () {
+
+            typeWriter();
+
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll(); // Check on load
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youth Balance - Wellbeing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="page-shell">
+        <header class="top-nav">
+            <div class="brand">
+                <span class="brand-main">Youth Balance</span>
+                <span class="brand-sub">Wellbeing</span>
+            </div>
+            <nav class="nav-links">
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('wellbeing') }}" class="active">Wellbeing</a>
+                <a href="{{ url_for('tasks_page') }}">Daily Tasks</a>
+                <a href="{{ url_for('resources') }}">Resources</a>
+                <a href="{{ url_for('account') }}" class="nav-cta">Account</a>
+            </nav>
+        </header>
+
+        <main class="page-main">
+            <section class="section long-section fade-in-up">
+                <h1 class="section-title">Gentle Moments for Busy Days</h1>
+                <p class="section-intro">
+                    Simple, quick self-care ideas and calming techniques for when you need a peaceful pause.
+                    Each suggestion takes 5-15 minutes and can be done anywhere.
+                </p>
+
+                <div class="cards-grid">
+                    <article class="info-card">
+                        <h2>Quick Reset (5-10 minutes)</h2>
+                        <ul>
+                            <li>Drink a full glass of water slowly and mindfully</li>
+                            <li>Open a window and take 5 deep, slow breaths</li>
+                            <li>Write down 3 things you're grateful for today</li>
+                            <li>Gently stretch your neck, shoulders, and back</li>
+                            <li>Listen to one calming song with your eyes closed</li>
+                            <li>Wash your face with cool water and moisturize</li>
+                            <li>Do 10 gentle jumping jacks or body movements</li>
+                            <li>Tidy up your immediate space for 5 minutes</li>
+                        </ul>
+                    </article>
+
+                    <article class="info-card">
+                        <h2>Digital Wellness Boundaries</h2>
+                        <ul>
+                            <li>Turn off all notifications for 1-2 hours</li>
+                            <li>Leave your phone in another room for 30 minutes</li>
+                            <li>Write your to-do list on paper instead of your phone</li>
+                            <li>Choose 2 specific times daily to check social media</li>
+                            <li>Unfollow accounts that make you feel bad about yourself</li>
+                            <li>Use "Do Not Disturb" mode during study/sleep time</li>
+                            <li>Replace 30 minutes of scrolling with reading or walking</li>
+                            <li>Create a phone-free bedtime routine</li>
+                        </ul>
+                    </article>
+
+                    <article class="info-card">
+                        <h2>Instant Mood Boosters</h2>
+                        <ul>
+                            <li>Play uplifting music and dance for one song</li>
+                            <li>Clean and organize one small area (desk, drawer, shelf)</li>
+                            <li>Do something creative for 15 minutes (draw, write, craft)</li>
+                            <li>Send a kind message to someone you care about</li>
+                            <li>Look at photos that make you smile</li>
+                            <li>Step outside and feel the sun on your face</li>
+                            <li>Make your bed and arrange your pillows nicely</li>
+                            <li>Light a candle or use a nice-smelling lotion</li>
+                        </ul>
+                    </article>
+
+                    <article class="info-card">
+                        <h2>Evening Wind-Down Rituals</h2>
+                        <ul>
+                            <li>Write down 3 accomplishments from today (even tiny ones)</li>
+                            <li>Prepare a warm, caffeine-free drink (herbal tea, warm milk)</li>
+                            <li>Do gentle stretches or yoga poses for 10 minutes</li>
+                            <li>Apply body lotion with slow, mindful movements</li>
+                            <li>Read something positive or inspiring before bed</li>
+                            <li>Practice the 4-7-8 breathing technique</li>
+                            <li>Set out clothes and materials for tomorrow</li>
+                            <li>Write tomorrow's top 3 priorities to clear your mind</li>
+                        </ul>
+                    </article>
+
+                    <article class="info-card">
+                        <h2>Building Tiny Habits</h2>
+                        <ul>
+                            <li>Drink water immediately when you wake up</li>
+                            <li>Spend 5 minutes in sunlight each day</li>
+                            <li>Practice gratitude: write one thing you appreciate daily</li>
+                            <li>Connect with one person you care about each day</li>
+                            <li>Take a 2-minute break from screens every hour</li>
+                            <li>Do 5 minutes of movement when you feel sluggish</li>
+                            <li>Compliment yourself in the mirror each morning</li>
+                            <li>End each day by tidying one small space</li>
+                        </ul>
+                    </article>
+
+                    <article class="info-card">
+                        <h2>When You're Feeling Overwhelmed</h2>
+                        <ul>
+                            <li>Remember: It's okay to take breaks and ask for help</li>
+                            <li>Break big tasks into smaller, manageable steps</li>
+                            <li>Focus on just one thing at a time, not everything</li>
+                            <li>Remind yourself of challenges you've overcome before</li>
+                            <li>Talk to someone you trust about how you're feeling</li>
+                            <li>Write down your worries, then write one small action step</li>
+                            <li>Do something that makes you feel accomplished (organize, clean)</li>
+                            <li>Practice self-compassion: treat yourself like a good friend</li>
+                        </ul>
+                    </article>
+
+                    <article class="info-card">
+                        <h2>Creative Self-Care</h2>
+                        <ul>
+                            <li>Doodle or sketch for 10 minutes without judgment</li>
+                            <li>Write stream-of-consciousness thoughts for 5 minutes</li>
+                            <li>Take photos of things that make you happy</li>
+                            <li>Create a playlist for different moods</li>
+                            <li>Try a new hairstyle or experiment with makeup</li>
+                            <li>Rearrange your room or study space</li>
+                            <li>Cook or bake something simple and delicious</li>
+                            <li>Start a small craft project or hobby</li>
+                        </ul>
+                    </article>
+
+                    <article class="info-card">
+                        <h2>Social Self-Care</h2>
+                        <ul>
+                            <li>Call or text someone who always makes you laugh</li>
+                            <li>Plan a low-key hangout with a close friend</li>
+                            <li>Join a club or group related to your interests</li>
+                            <li>Practice saying "no" to things that drain your energy</li>
+                            <li>Surround yourself with people who support your goals</li>
+                            <li>Have honest conversations about your feelings</li>
+                            <li>Set boundaries with people who bring negativity</li>
+                            <li>Celebrate friends' successes genuinely</li>
+                        </ul>
+                    </article>
+
+                    <article class="info-card">
+                        <h2>Mental Health Check-ins</h2>
+                        <ul>
+                            <li>Rate your energy level from 1-10 and adjust your day accordingly</li>
+                            <li>Notice your thoughts without judging them</li>
+                            <li>Identify one emotion you're feeling and where you feel it in your body</li>
+                            <li>Ask yourself: "What do I need right now?"</li>
+                            <li>Practice the 5-4-3-2-1 grounding technique when anxious</li>
+                            <li>Remind yourself that difficult feelings are temporary</li>
+                            <li>Seek professional help if you're struggling consistently</li>
+                            <li>Keep a list of things that help when you're feeling down</li>
+                        </ul>
+                    </article>
+                </div>
+
+
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
